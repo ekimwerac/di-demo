@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ExampleComponent } from './components/example/example.component';
 
 @Component({
   selector: 'app-root',
+  template: `
+    <h1>Angular Dependency Injection Demo</h1>
+    <app-example></app-example>
+  `,
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [ExampleComponent]
 })
-export class AppComponent {
-  title = 'di-demo';
-}
+export class AppComponent {}
